@@ -41,6 +41,10 @@ public class sql {
         }
     }
 
+//    public ArrayList<Patient> getPatientsonSearch() throws  SQLException {
+//
+//    }
+
     public ArrayList<Patient> getPatients() throws SQLException {
         ResultSet rs = statement.executeQuery("SELECT * FROM Patient");
         ArrayList<Patient> patients = new ArrayList<Patient>();

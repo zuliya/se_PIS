@@ -20,7 +20,7 @@ public class Main extends Application {
         try {
             sql.shared.getPatients();
         } catch (Exception e) {
-            //
+            System.out.println(e.getLocalizedMessage());
         }
         launch(args);
     }
