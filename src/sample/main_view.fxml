@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TabPane layoutX="51.0" layoutY="44.0" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <tabs>
+          <Tab id="patientTab" text="Patient">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.3" orientation="VERTICAL" prefHeight="367.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <items>
+                            <AnchorPane id="searchAnchor" fx:id="searchAncorPane" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TabPane layoutX="-18.0" layoutY="-86.0" prefHeight="106.0" prefWidth="598.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <tabs>
+                                        <Tab text="Search">
+                                             <content>
+                                                <TextField fx:id="nameSearch" alignment="BASELINE_RIGHT" prefHeight="27.0" prefWidth="339.0" />
+                                             </content>
+                                          </Tab>
+                                        <Tab text="Advanced Search" />
+                                      </tabs>
+                                    </TabPane>
+                                 </children></AnchorPane>
+                            <AnchorPane id="tableAnchor" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                 <children>
+                                    <TableView id="patientViewTable" fx:id="patientViewTable" layoutX="-2.0" prefHeight="251.0" prefWidth="366.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="patientID" prefWidth="75.0" text="ID" />
+                                        <TableColumn fx:id="patientName" prefWidth="75.0" text="name" />
+                                          <TableColumn fx:id="patientSurname" prefWidth="75.0" text="surname" />
+                                          <TableColumn fx:id="patientDOB" prefWidth="75.0" text="DOB" />
+                                          <TableColumn fx:id="patiendAddress" prefWidth="75.0" text="address" />
+                                          <TableColumn fx:id="patientPhoneNum" prefWidth="75.0" text="phone N" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab id="AddPatientTab" text="Add Patient" />
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
